@@ -34,4 +34,4 @@ jobs:
     - uses: azure/webapps-container-deploy@v1
       with:
         app-name: suaggarcontainer
-        images: shanu07/mydockerimage:v1.0.0  
+        images: shanu07/bootcamp-demo:132  
