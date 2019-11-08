@@ -35,3 +35,13 @@ jobs:
       with:
         app-name: suaggarcontainer
         images: shanu07/bootcamp-demo:132  
+
+    - uses: azure/functions-action@v1
+      with:
+        app-name: suaggarcsharp1
+        package: ./Functions.zip
+
+    - uses: azure/functions-container-action@v1
+      with:
+        app-name: suaggarcsharp1
+        images: shanu07/bootcamp-demo:132 
