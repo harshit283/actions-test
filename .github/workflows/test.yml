@@ -20,28 +20,3 @@ jobs:
       with:
         publish-profile: ${{ secrets.nodesa_publishprofile }}
         package: ./app-sample
-
-    - uses: azure/actions/login@releases/v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-    - name: 'Run Azure webapp deploy action using publish profile credentials'
-      uses: azure/webapps-deploy@v1
-      with:
-        app-name: node-sa
-        package: ./app-sample
-
-    - uses: azure/webapps-container-deploy@v1
-      with:
-        app-name: suaggarcontainer
-        images: shanu07/bootcamp-demo:132  
-
-    - uses: azure/functions-action@v1
-      with:
-        app-name: suaggarcsharp1
-        package: ./Functions.zip
-
-    - uses: azure/functions-container-action@v1
-      with:
-        app-name: suaggarcsharp1
-        images: shanu07/bootcamp-demo:132 
