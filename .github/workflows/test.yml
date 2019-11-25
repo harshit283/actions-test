@@ -18,5 +18,5 @@ jobs:
     - name: 'Run Azure webapp deploy action using publish profile credentials'
       uses: azure/webapps-deploy@v1
       with:
-        publish-profile: ${{ secrets.nodesa_publishprofile }}
+        publish-profile: ${{ secrets.nodesa1_publishprofile }}
         package: ./app-sample
